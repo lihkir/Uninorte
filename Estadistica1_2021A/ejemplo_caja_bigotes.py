@@ -1,6 +1,4 @@
 import pandas as pd 
-from numpy.random import seed
-from numpy.random import randn
 import seaborn as sns
 import matplotlib.pyplot as plt
 sns.set_theme(style="whitegrid")
