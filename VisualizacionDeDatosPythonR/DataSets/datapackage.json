@@ -1,0 +1,388 @@
+{
+  "bytes": 71724,
+  "datahub": {
+    "created": "2017-11-09T00:53:44.442078",
+    "findability": "published",
+    "flowid": "core/gdp-us/10",
+    "modified": "2018-06-24T11:59:13.261302",
+    "owner": "core",
+    "ownerid": "core"
+  },
+  "hash": "e5921d273bda1429ddc3a1c1bdf01dfd",
+  "id": "core/gdp-us",
+  "licenses": [
+    {
+      "name": "ODC-PDDL-1.0",
+      "path": "http://opendatacommons.org/licenses/pddl/",
+      "title": "Open Data Commons Public Domain Dedication and License v1.0"
+    }
+  ],
+  "name": "gdp-us",
+  "resources": [
+    {
+      "bytes": 2885,
+      "datahub": {
+        "type": "original"
+      },
+      "dpp:streamedFrom": "https://s3.amazonaws.com/rawstore.datahub.io/e2e1968ae528c9edb2165c7999ba0675.csv",
+      "encoding": "ISO-8859-1",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "name": "year_original",
+      "path": "archive/year.csv",
+      "pathType": "local",
+      "profile": "data-resource",
+      "schema": {
+        "fields": [
+          {
+            "description": "The year",
+            "name": "date",
+            "type": "year"
+          },
+          {
+            "description": "GDP in billions of current dollars",
+            "groupChar": ",",
+            "name": "level-current",
+            "type": "number"
+          },
+          {
+            "description": "GDP in billions of chained 2009 dollars",
+            "groupChar": ",",
+            "name": "level-chained",
+            "type": "number"
+          },
+          {
+            "description": "GDP percent change based on current dollars",
+            "name": "change-current",
+            "type": "number"
+          },
+          {
+            "description": "GDP percent change based on chained 2009 dollars",
+            "name": "change-chained",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "bytes": 11236,
+      "datahub": {
+        "type": "original"
+      },
+      "dpp:streamedFrom": "https://s3.amazonaws.com/rawstore.datahub.io/0ff089d4fdb43925f6c4b4777de25f7b.csv",
+      "encoding": "ISO-8859-1",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "name": "quarter_original",
+      "path": "archive/quarter.csv",
+      "pathType": "local",
+      "profile": "data-resource",
+      "schema": {
+        "fields": [
+          {
+            "description": "The quarter (first day of the quarter)",
+            "format": "any",
+            "name": "date",
+            "type": "date"
+          },
+          {
+            "description": "GDP in billions of current dollars",
+            "groupChar": ",",
+            "name": "level-current",
+            "type": "number"
+          },
+          {
+            "description": "GDP in billions of chained 2009 dollars",
+            "groupChar": ",",
+            "name": "level-chained",
+            "type": "number"
+          },
+          {
+            "description": "GDP percent change based on current dollars",
+            "name": "change-current",
+            "type": "number"
+          },
+          {
+            "description": "GDP percent change based on chained 2009 dollars",
+            "name": "change-chained",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "bytes": 982,
+      "datahub": {
+        "type": "derived/report"
+      },
+      "description": "Validation report for tabular data",
+      "dpp:streamedFrom": "/tmp/tmp8tod471p/core/gdp-us/validation_report/data/e4fa5c7b68d931fd41bfa42127243185/validation_report.json",
+      "format": "json",
+      "hash": "e4fa5c7b68d931fd41bfa42127243185",
+      "name": "validation_report",
+      "path": "data/validation_report.json",
+      "profile": "data-resource"
+    },
+    {
+      "bytes": 2504,
+      "datahub": {
+        "derivedFrom": [
+          "year"
+        ],
+        "type": "derived/csv"
+      },
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "dpp:streamedFrom": "/tmp/tmp8tod471p/core/gdp-us/year_csv/data/846de5b92a9ccab66a0ecd221bb0bcbc/year_csv.csv",
+      "encoding": "utf-8",
+      "format": "csv",
+      "hash": "846de5b92a9ccab66a0ecd221bb0bcbc",
+      "mediatype": "text/csv",
+      "name": "year_csv",
+      "path": "data/year_csv.csv",
+      "pathType": "local",
+      "profile": "data-resource",
+      "rowcount": 86,
+      "schema": {
+        "fields": [
+          {
+            "description": "The year",
+            "name": "date",
+            "type": "year"
+          },
+          {
+            "decimalChar": ".",
+            "description": "GDP in billions of current dollars",
+            "groupChar": "",
+            "name": "level-current",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "description": "GDP in billions of chained 2009 dollars",
+            "groupChar": "",
+            "name": "level-chained",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "description": "GDP percent change based on current dollars",
+            "groupChar": "",
+            "name": "change-current",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "description": "GDP percent change based on chained 2009 dollars",
+            "groupChar": "",
+            "name": "change-chained",
+            "type": "number"
+          }
+        ]
+      },
+      "signed": true
+    },
+    {
+      "bytes": 9814,
+      "datahub": {
+        "derivedFrom": [
+          "quarter"
+        ],
+        "type": "derived/csv"
+      },
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "dpp:streamedFrom": "/tmp/tmp8tod471p/core/gdp-us/quarter_csv/data/b2cb16cacc28d871c6754134251427fc/quarter_csv.csv",
+      "encoding": "utf-8",
+      "format": "csv",
+      "hash": "b2cb16cacc28d871c6754134251427fc",
+      "mediatype": "text/csv",
+      "name": "quarter_csv",
+      "path": "data/quarter_csv.csv",
+      "pathType": "local",
+      "profile": "data-resource",
+      "rowcount": 281,
+      "schema": {
+        "fields": [
+          {
+            "description": "The quarter (first day of the quarter)",
+            "format": "%Y-%m-%d",
+            "name": "date",
+            "type": "date"
+          },
+          {
+            "decimalChar": ".",
+            "description": "GDP in billions of current dollars",
+            "groupChar": "",
+            "name": "level-current",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "description": "GDP in billions of chained 2009 dollars",
+            "groupChar": "",
+            "name": "level-chained",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "description": "GDP percent change based on current dollars",
+            "groupChar": "",
+            "name": "change-current",
+            "type": "number"
+          },
+          {
+            "decimalChar": ".",
+            "description": "GDP percent change based on chained 2009 dollars",
+            "groupChar": "",
+            "name": "change-chained",
+            "type": "number"
+          }
+        ]
+      },
+      "signed": true
+    },
+    {
+      "bytes": 9579,
+      "datahub": {
+        "derivedFrom": [
+          "year"
+        ],
+        "type": "derived/json"
+      },
+      "dpp:streamedFrom": "/tmp/tmp8tod471p/core/gdp-us/year_json/data/37295f010ae077399baf63038818f935/year_json.json",
+      "encoding": "utf-8",
+      "format": "json",
+      "hash": "37295f010ae077399baf63038818f935",
+      "mediatype": "text/csv",
+      "name": "year_json",
+      "path": "data/year_json.json",
+      "pathType": "local",
+      "profile": "data-resource",
+      "rowcount": 86,
+      "schema": {
+        "fields": [
+          {
+            "description": "The year",
+            "name": "date",
+            "type": "year"
+          },
+          {
+            "description": "GDP in billions of current dollars",
+            "groupChar": ",",
+            "name": "level-current",
+            "type": "number"
+          },
+          {
+            "description": "GDP in billions of chained 2009 dollars",
+            "groupChar": ",",
+            "name": "level-chained",
+            "type": "number"
+          },
+          {
+            "description": "GDP percent change based on current dollars",
+            "name": "change-current",
+            "type": "number"
+          },
+          {
+            "description": "GDP percent change based on chained 2009 dollars",
+            "name": "change-chained",
+            "type": "number"
+          }
+        ]
+      },
+      "signed": true
+    },
+    {
+      "bytes": 33636,
+      "datahub": {
+        "derivedFrom": [
+          "quarter"
+        ],
+        "type": "derived/json"
+      },
+      "dpp:streamedFrom": "/tmp/tmp8tod471p/core/gdp-us/quarter_json/data/d7af18ad25c49692f6106c18d8da71bc/quarter_json.json",
+      "encoding": "utf-8",
+      "format": "json",
+      "hash": "d7af18ad25c49692f6106c18d8da71bc",
+      "mediatype": "text/csv",
+      "name": "quarter_json",
+      "path": "data/quarter_json.json",
+      "pathType": "local",
+      "profile": "data-resource",
+      "rowcount": 281,
+      "schema": {
+        "fields": [
+          {
+            "description": "The quarter (first day of the quarter)",
+            "format": "%Y-%m-%d",
+            "name": "date",
+            "type": "date"
+          },
+          {
+            "description": "GDP in billions of current dollars",
+            "groupChar": ",",
+            "name": "level-current",
+            "type": "number"
+          },
+          {
+            "description": "GDP in billions of chained 2009 dollars",
+            "groupChar": ",",
+            "name": "level-chained",
+            "type": "number"
+          },
+          {
+            "description": "GDP percent change based on current dollars",
+            "name": "change-current",
+            "type": "number"
+          },
+          {
+            "description": "GDP percent change based on chained 2009 dollars",
+            "name": "change-chained",
+            "type": "number"
+          }
+        ]
+      },
+      "signed": true
+    },
+    {
+      "bytes": 1088,
+      "dpp:streamedFrom": "/tmp/tmpe4lx9z68/README.md",
+      "format": "md",
+      "name": "readme",
+      "path": "README.md"
+    }
+  ],
+  "sources": [
+    {
+      "name": "Bureau of Economics Analysis (US Government)",
+      "path": "http://www.bea.gov/national/index.htm#gdp",
+      "title": "Bureau of Economics Analysis (US Government)"
+    }
+  ],
+  "title": "Gross Domestic Product of the United States (US GDP)",
+  "views": [
+    {
+      "name": "graph",
+      "spec": {
+        "group": "date",
+        "series": [
+          "change-chained"
+        ],
+        "type": "column"
+      },
+      "specType": "simple",
+      "title": "GDP percent change based on chained 2009 dollars"
+    }
+  ]
+}
